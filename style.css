@@ -1,0 +1,164 @@
+
+/* 這裡是css reset 
+http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+ */
+ 
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed, 
+ figure, figcaption, footer, header, hgroup, 
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font-size: 100%;
+     font: inherit;
+     vertical-align: baseline;
+ }
+ /* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure, 
+ footer, header, hgroup, menu, nav, section {
+     display: block;
+ }
+ body {
+     line-height: 1;
+ }
+ ol, ul {
+     list-style: none;
+ }
+ blockquote, q {
+     quotes: none;
+ }
+ blockquote:before, blockquote:after,
+ q:before, q:after {
+     content: '';
+     content: none;
+ }
+ table {
+     border-collapse: collapse;
+     border-spacing: 0;
+ }
+ /* RWD 課程內容建議增加 css reset*/
+ img{
+     max-width: 100%;
+     height: auto;
+ }
+ 
+ *,*:before,after{
+     box-sizing: border-box;
+ }
+ 
+ /* RWD 課程 內容建議增加 css reset*/
+
+ .container{
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.container2{
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: 60px;
+}
+
+
+.mt90{
+    margin-top: 90px;
+
+}
+
+.mb8{
+    margin-bottom: 8px;
+}
+.df{
+    display: flex;
+ }
+.jcsb{
+    justify-content: space-between;
+}
+
+.brc{
+    background-color: rgb(50, 15, 50);
+}
+
+.logo{
+    width: 25%;
+    height: 100%;
+}
+
+
+
+.content{
+    margin-top: 32px;
+    margin-left: 540px;
+    line-height: 2.5;
+    font-size: 16PX;
+
+}
+
+.line{
+    margin-top: 32px;
+    border:rgb(174, 174, 174) 0.5px solid;
+    width: 50%;
+}
+
+.profile{
+    margin-top: 48px;
+    text-align:center;
+    line-height: 2;
+    text-decoration: none;
+}
+
+h2{
+    font-size: 20px;
+    line-height: 1.8rem;
+}
+
+.name{
+    line-height: 1.5rem;
+
+}
+
+h3{
+    font-size: 20px;
+    line-height: 1.8rem;
+}
+
+.card-body{
+    margin-top: 16px;
+    line-height: 1.5rem;
+}
+
+.body-item{
+   max-width: 320px;
+   font-size: 14px;
+
+}
+
+.fwb{
+    font-weight: bolder;
+}
+
+@media(max-width: 760px) {
+    .header{
+        flex-direction:column-reverse;
+    }
+    .logo{
+        width: 40%;
+        height: 100%;
+        margin-bottom: 16px;
+    }
+
+}

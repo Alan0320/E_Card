@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BenQ-Electronic-Name-Card</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <div class="header df container jcsb mt90">
+        <div class="name ">
+            <h2 class="mb8 fwb"><span id="response_name"></span></h2>
+            <p class="mb8">ID <span id="response_id"></span></p>
+            <ul>
+                <li>資深工程師</li>
+                <li>機器視覺部</li>
+                <li>先端設備開發處</li>
+            </ul>
+        </div>
+        <div class="logo"><img src="https://www.benq.com/etc/designs/g6/clientlib-site/img/header-icon/nav-icon-benq-logo.png" alt="BenQ-logo"></div>
+    </div>
+    
+    <div class="card-body container2">
+        <h3 class="mb8">明基材料股份有限公司</h3>
+        <ul class="body-item">
+            <li><span class="fwb">總部</span> 333403 桃園市龜山區建國東路29號</li>
+            <li>
+                <ul class="df jcsb">
+                    <li><span class="fwb">電話</span> +886 374-8800 #2287</li>
+                    <li><span class="fwb">手機</span><span id="response_phonenumber"></span></li>
+                </ul>
+            </li>
+            <ul class="df jcsb">
+                <li><span class="fwb">傳真</span> +886 374-8870</li>
+                <li>  </li>
+                <li><span class="fwb">統一編號</span> 6549778</li>
+            </ul>
+            <li>
+
+            </li>
+            <li><span id="response_email"></span></li>
+            <li>BenQMaterials.com</li>
+        </ul>
+
+    </div>
+</body>
+
+
+<script>
+
+    // 需要 response_id、response_name、response_phonenumbe，就完成了～
+    
+ 
+     // 替換為您部署的 Google Apps Script URL
+     var scriptUrl = 'https://script.google.com/macros/s/AKfycbySPpZ5IdQa2Kp5YxH_2RHY6iv6VBnbszy6mOVCg9iXJ6A717qTnDGWa-I1DBze1LNk/exec';
+ 
+     // 調用 Google Apps Script 函數並獲取結果
+     function doGet() {
+       var vid ='1'; // 替換為您想要查找的索引值
+       var vindex = 2;
+       fetch(scriptUrl + '?id='+vid+'&index='+vindex)
+         .then(function(response) {
+           return response.text();
+         })
+         .then(function(data) {
+           var responseElement = document.getElementById('response_name');
+           responseElement.textContent = data;
+         })
+         .catch(function(error) {
+           console.log('Error:', error);
+         });
+     }
+ 
+     // 調用 fetchValue 函數
+     var val= doGet();
+     //alert(val);
+   </script>
+</html>
